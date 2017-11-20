@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // 通知を許可してもらうダイアログを出す
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {(granted, error) in
             if granted {
@@ -30,15 +32,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    // リモート通知のデバイストークン取得成功
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
         let tokenString = deviceToken.map { String(format: "%.2hhx", $0) }.joined()
-        print("deviceToken = \(tokenString)")
+        successGetDeviceToken(deviceToken: tokenString)
     }
     
+    // リモート通知のデバイストークン取得の失敗・・・どうしよ？
     func application(_ application: UIApplication,
                      didFailToRegisterForRemoteNotificationsWithError error: Error){
         print("Failed to get deviceToken, error: \(error.localizedDescription)")
+        successGetDeviceToken(deviceToken: "")
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -63,6 +68,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    private func successGetDeviceToken( deviceToken: String) -> Void {
+        print("deviceToken = \(deviceToken)")
+        let push_host : String = NSLocalizedString("push_host", comment: "");
+        let push_url : String = NSLocalizedString("push_url_registtoken", comment: "");
+        print("Push host = \(push_host)")
+        print("Push url = \(push_url)")
+        let request_url = "http://\(push_host)\(push_url)"
+        print(request_url);
+    }
 
 }
 
