@@ -113,6 +113,7 @@
 		F15F29901FB9BF610062E58D = {
 			isa = PBXGroup;
 			children = (
+				F17AB7181FC2C51200AF4A91 /* buildno.sh */,
 				F17AB71E1FC2D0D800AF4A91 /* Library */,
 				F17AB71C1FC2CE4A00AF4A91 /* Default-568h@2x.png */,
 				F17AB6DB1FC291FE00AF4A91 /* Localizable.strings */,
@@ -134,7 +135,6 @@
 		F15F299B1FB9BF610062E58D /* Axyio01_src */ = {
 			isa = PBXGroup;
 			children = (
-				F17AB7181FC2C51200AF4A91 /* buildno.sh */,
 				F15F29AE1FB9BFA30062E58D /* Axyio01.entitlements */,
 				F15F299C1FB9BF610062E58D /* AppDelegate.swift */,
 				F15F299E1FB9BF610062E58D /* ViewController.swift */,
@@ -333,7 +333,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PROJECT_DIR}/${PROJECT_DIR}/buildno.sh";
+			shellScript = "${PROJECT_DIR}/buildno.sh";
 		};
 		F17AB71B1FC2CA2D00AF4A91 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -505,7 +505,7 @@
 				CODE_SIGN_ENTITLEMENTS = Axyio01_src/Axyio01.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GH497R933C;
-				INFOPLIST_FILE = Axyio01/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Axyio01_src/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.trifeed.Axyio01;
@@ -523,7 +523,7 @@
 				CODE_SIGN_ENTITLEMENTS = Axyio01_src/Axyio01.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GH497R933C;
-				INFOPLIST_FILE = Axyio01/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Axyio01_src/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.trifeed.Axyio01;
