@@ -68,15 +68,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // デバイストークンをサーバへ登録する
     private func successGetDeviceToken( deviceToken: String) -> Void {
-        print("deviceToken = \(deviceToken)")
+
         let push_host : String = NSLocalizedString("push_host", comment: "");
         let push_url : String = NSLocalizedString("push_url_registtoken", comment: "");
+        let request_url = "http://\(push_host)\(push_url)"
+
+        print("deviceToken = \(deviceToken)")
         print("Push host = \(push_host)")
         print("Push url = \(push_url)")
-        let request_url = "http://\(push_host)\(push_url)"
         print(request_url);
-    }
+        
+        // サーバへリクエストを行う
+        let parameters = [
+            "project": "axyio01",
+            "devicetoken": deviceToken
+        ]
+        Alamofire.request(request_url, method: HTTPMethod.post, parameters: parameters).responseString { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+            }
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+            }
+        }
 
+    }
 }
 
