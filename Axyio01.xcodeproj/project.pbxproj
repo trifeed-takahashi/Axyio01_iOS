@@ -13,6 +13,7 @@
 		10C8F1CA1FC7E1F900B5E75A /* nc45862.caf in Resources */ = {isa = PBXBuildFile; fileRef = 10C8F1BF1FC7E1F900B5E75A /* nc45862.caf */; };
 		10C8F1CB1FC7E1F900B5E75A /* nc45862.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 10C8F1C01FC7E1F900B5E75A /* nc45862.mp3 */; };
 		10C8F1CC1FC7E1F900B5E75A /* nc45862.xmp in Resources */ = {isa = PBXBuildFile; fileRef = 10C8F1C11FC7E1F900B5E75A /* nc45862.xmp */; };
+		10C8F1CF1FC7E3BD00B5E75A /* nc45862.caf in Resources */ = {isa = PBXBuildFile; fileRef = 10C8F1CE1FC7E3BD00B5E75A /* nc45862.caf */; };
 		F15F299D1FB9BF610062E58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F299C1FB9BF610062E58D /* AppDelegate.swift */; };
 		F15F299F1FB9BF610062E58D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F299E1FB9BF610062E58D /* ViewController.swift */; };
 		F15F29A21FB9BF610062E58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A01FB9BF610062E58D /* Main.storyboard */; };
@@ -119,6 +120,7 @@
 		10C8F1BF1FC7E1F900B5E75A /* nc45862.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nc45862.caf; sourceTree = "<group>"; };
 		10C8F1C01FC7E1F900B5E75A /* nc45862.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nc45862.mp3; sourceTree = "<group>"; };
 		10C8F1C11FC7E1F900B5E75A /* nc45862.xmp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nc45862.xmp; sourceTree = "<group>"; };
+		10C8F1CE1FC7E3BD00B5E75A /* nc45862.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = nc45862.caf; path = "音ネタ/nc45862.caf"; sourceTree = SOURCE_ROOT; };
 		F15F29991FB9BF610062E58D /* Axyio01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Axyio01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15F299C1FB9BF610062E58D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F15F299E1FB9BF610062E58D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,12 +151,20 @@
 		10C8F1BD1FC7E1F900B5E75A /* 音ネタ */ = {
 			isa = PBXGroup;
 			children = (
-				10C8F1BE1FC7E1F900B5E75A /* nc45862.aif */,
 				10C8F1BF1FC7E1F900B5E75A /* nc45862.caf */,
+				10C8F1BE1FC7E1F900B5E75A /* nc45862.aif */,
 				10C8F1C01FC7E1F900B5E75A /* nc45862.mp3 */,
 				10C8F1C11FC7E1F900B5E75A /* nc45862.xmp */,
 			);
 			path = "音ネタ";
+			sourceTree = "<group>";
+		};
+		10C8F1CD1FC7E37700B5E75A /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				10C8F1CE1FC7E3BD00B5E75A /* nc45862.caf */,
+			);
+			path = sound;
 			sourceTree = "<group>";
 		};
 		F15F29901FB9BF610062E58D = {
@@ -183,6 +193,7 @@
 		F15F299B1FB9BF610062E58D /* Axyio01_src */ = {
 			isa = PBXGroup;
 			children = (
+				10C8F1CD1FC7E37700B5E75A /* sound */,
 				F15F29AE1FB9BFA30062E58D /* Axyio01.entitlements */,
 				F15F299C1FB9BF610062E58D /* AppDelegate.swift */,
 				F15F299E1FB9BF610062E58D /* ViewController.swift */,
@@ -367,6 +378,7 @@
 				F15F29A41FB9BF610062E58D /* Assets.xcassets in Resources */,
 				10C8F1CB1FC7E1F900B5E75A /* nc45862.mp3 in Resources */,
 				F17AB71D1FC2CE4A00AF4A91 /* Default-568h@2x.png in Resources */,
+				10C8F1CF1FC7E3BD00B5E75A /* nc45862.caf in Resources */,
 				F15F29A21FB9BF610062E58D /* Main.storyboard in Resources */,
 				10C8F1CC1FC7E1F900B5E75A /* nc45862.xmp in Resources */,
 			);
