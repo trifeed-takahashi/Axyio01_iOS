@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "container:"
-      name = "&#x60a0;&#x6797;&#x9928;&#x30fb;&#x7269;&#x7523;&#x9928;&#x5171;&#x6709;&#x9001;&#x6c34;&#x30dd;&#x30f3;&#x30d7;&#x65bd;&#x8a2d;">
-      <FileRef
-         location = "self:">
-      </FileRef>
-   </Group>
+   <FileRef
+      location = "self:">
+   </FileRef>
 </Workspace>
