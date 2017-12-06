@@ -73,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let push_host : String = NSLocalizedString("push_host", comment: "");
         let push_url : String = NSLocalizedString("push_url_registtoken", comment: "");
-        let request_url = "http://\(push_host)\(push_url)"
+        let request_url = "https://\(push_host)\(push_url)"
 
         print("deviceToken = \(deviceToken)")
         print("Push host = \(push_host)")
