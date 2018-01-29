@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var msgText: UITextField!
+    @IBOutlet weak var btnConfirm: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        msgText.text = "Hello World"
     }
 
     override func didReceiveMemoryWarning() {

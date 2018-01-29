@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,57 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Axyio01" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0M-PP-xNQ">
+                                <rect key="frame" x="28" y="40" width="320" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="悠林館・物産館共有ポンプ施設監視">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="HiraKakuPro-W6"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="msgText" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OeS-6I-FJn">
+                                <rect key="frame" x="42" y="97" width="292" height="378"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="Quq-aN-ue5"/>
+                                    <constraint firstAttribute="height" constant="378" id="d4q-h2-4RX"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jT5-w1-WPI">
+                                <rect key="frame" x="42" y="491" width="292" height="136"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="wYp-gx-cyj" firstAttribute="bottom" secondItem="OeS-6I-FJn" secondAttribute="bottom" constant="192" id="HXz-Pr-QAT"/>
+                            <constraint firstItem="R0M-PP-xNQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ReR-mx-Wd8"/>
+                            <constraint firstItem="R0M-PP-xNQ" firstAttribute="top" secondItem="wYp-gx-cyj" secondAttribute="top" constant="20" id="WB1-Ys-IC6"/>
+                            <constraint firstItem="OeS-6I-FJn" firstAttribute="top" secondItem="R0M-PP-xNQ" secondAttribute="bottom" constant="37" id="WIz-WB-wXO"/>
+                            <constraint firstItem="wYp-gx-cyj" firstAttribute="leading" secondItem="OeS-6I-FJn" secondAttribute="leading" constant="-42" id="hVb-W6-9PM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wYp-gx-cyj"/>
                     </view>
+                    <connections>
+                        <outlet property="btnConfirm" destination="jT5-w1-WPI" id="7JT-J1-3iJ"/>
+                        <outlet property="msgText" destination="OeS-6I-FJn" id="mmw-75-ZM8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="102.99850074962519"/>
         </scene>
     </scenes>
 </document>
