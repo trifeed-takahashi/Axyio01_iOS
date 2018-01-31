@@ -17,7 +17,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        msgText.text = "Hello World"
+        btnConfirm.setTitleColor(UIColor.white, for: .normal)
+        btnConfirm.backgroundColor = UIColor(red:255/255,green:0/255,blue:0/255,alpha:1)
+        
+        msgText.text = "故障は報告されていません"
+        
+        #if DEBUG
+            NSLog("viewDidLoad")
+        #endif
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +32,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func viewWillAppear(_ animated: Bool) {
+        #if DEBUG
+            NSLog("viewWillAppear")
+        #endif
+    }
 }
 

@@ -15,19 +15,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
         // Override point for customization after application launch.
-        
-        // 通知を許可してもらうダイアログを出す
         let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {(granted, error) in
+        center.requestAuthorization(options:[.badge, .sound, .alert], completionHandler: { (granted, error) in
+            if error != nil {
+                return
+            }
+            
             if granted {
                 DispatchQueue.main.async(execute: {
                     application.registerForRemoteNotifications()
                 })
+                debugPrint("通知許可")
+            } else {
+                debugPrint("通知拒否")
             }
         })
+        
+        UNUserNotificationCenter.current().delegate = self
         
         return true
     }
@@ -58,6 +65,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        #if DEBUG
+            NSLog("applicationWillEnterForeground")
+        #endif
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
@@ -98,7 +108,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Data: \(utf8Text)") // original server data as UTF8 string
             }
         }
+    }
 
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+
+        print("Push Notification will present \(notification)")
+        completionHandler([.badge, .sound, .alert])
+        
+    }
+    
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        if response.notification.request.content.categoryIdentifier == "TIMER_EXPIRED" {
+            // 期限に達したタイマーのアクションをハンドル。
+            if response.actionIdentifier == "SNOOZE_ACTION" {
+                // 古いタイマーを無効にして新しいタイマーを生成。
+            }
+            else if response.actionIdentifier == "STOP_ACTION" {
+                // タイマーを無効化。
+            }
+        }
+        
+        // その他のタイプの通知に関するアクションをハンドル。
+        print("Push Notification did receive \(response)")
+        completionHandler()
     }
 }
 
