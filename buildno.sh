@@ -5,7 +5,20 @@
 #
 #  Created by 高橋聖二 on 2017/11/20.
 #  Copyright © 2017年 trifeed inc. All rights reserved.
-build_number=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "${PROJECT_DIR}/${INFOPLIST_FILE}")
-build_number=$(($build_number + 1))
-/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $build_number" "${PROJECT_DIR}/${INFOPLIST_FILE}"
+if [ ${CONFIGURATION} = "Debug" ]; then
 
+plistBuddy="/usr/libexec/PlistBuddy"
+infoPlistFileSource="${SRCROOT}/${INFOPLIST_FILE}"
+infoPlistFileDestination="${TEMP_DIR}/Preprocessed-Info.plist"
+
+currentVersion=$($plistBuddy -c "Print CFBundleVersion" $infoPlistFileSource)
+
+versionPrefix="dev-"
+lastCommitDate=$(git log -1 --format='%ci')
+versionSuffix=" ($lastCommitDate)"
+
+versionString=$versionPrefix$currentVersion$versionSuffix
+
+$plistBuddy -c "Set :CFBundleVersion $versionString" $infoPlistFileDestination
+
+fi

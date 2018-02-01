@@ -39,6 +39,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func application(_ application: UIApplication,
+                     didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void){
+        
+        // ここで拡張ペイロードが取得出来た。メッセージと一緒に取得出来る方法…？
+        print(userInfo);
+        
+        completionHandler(UIBackgroundFetchResult.newData)
+    }
+
     // リモート通知のデバイストークン取得成功
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
@@ -113,32 +123,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
-    @available(iOS 10.0, *)
+
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
 
-        print("Push Notification will present \(notification)")
+        if notification.request.trigger is UNPushNotificationTrigger {
+            debugPrint("プッシュ通知受信")
+        }
+        print("========================================================")
+        //print("Push Notification will present \(notification)")
+        //print(notification.request.identifier)
+        //print(notification.request.content.userInfo)
+        let userinfokeys = notification.request.content.userInfo.keys
+        print(userinfokeys)
+        let alert_id = notification.request.content.userInfo["alert_id"]
+        if(alert_id != nil){
+            print(alert_id!)
+        }
+        print("========================================================")
         completionHandler([.badge, .sound, .alert])
-        
     }
-    
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
-        if response.notification.request.content.categoryIdentifier == "TIMER_EXPIRED" {
-            // 期限に達したタイマーのアクションをハンドル。
-            if response.actionIdentifier == "SNOOZE_ACTION" {
-                // 古いタイマーを無効にして新しいタイマーを生成。
-            }
-            else if response.actionIdentifier == "STOP_ACTION" {
-                // タイマーを無効化。
-            }
+        
+        debugPrint(response.notification.request.identifier)
+        
+        
+        //print(response.notification.request.identifier)
+        //print(response.notification.request.content.userInfo)
+        let userinfokeys = response.notification.request.content.userInfo.keys
+        print(userinfokeys)
+
+        let alert_id: Any? = response.notification.request.content.userInfo["alert_id"]
+        if(alert_id != nil){
+            print(alert_id!)
         }
         
         // その他のタイプの通知に関するアクションをハンドル。
-        print("Push Notification did receive \(response)")
+        //print("Push Notification did receive \(response)")
         completionHandler()
     }
 }

@@ -9,20 +9,14 @@
 /* Begin PBXBuildFile section */
 		105AD7CE1FC7DADE00A54096 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A9F02D1FC30C9D00946A5C /* Alamofire.framework */; };
 		105AD7CF1FC7DADE00A54096 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1A9F02D1FC30C9D00946A5C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		10C8F1C91FC7E1F900B5E75A /* nc45862.aif in Resources */ = {isa = PBXBuildFile; fileRef = 10C8F1BE1FC7E1F900B5E75A /* nc45862.aif */; };
 		10C8F1CA1FC7E1F900B5E75A /* nc45862.caf in Resources */ = {isa = PBXBuildFile; fileRef = 10C8F1BF1FC7E1F900B5E75A /* nc45862.caf */; };
-		10C8F1CB1FC7E1F900B5E75A /* nc45862.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 10C8F1C01FC7E1F900B5E75A /* nc45862.mp3 */; };
-		10C8F1CC1FC7E1F900B5E75A /* nc45862.xmp in Resources */ = {isa = PBXBuildFile; fileRef = 10C8F1C11FC7E1F900B5E75A /* nc45862.xmp */; };
-		10C8F1CF1FC7E3BD00B5E75A /* nc45862.caf in Resources */ = {isa = PBXBuildFile; fileRef = 10C8F1CE1FC7E3BD00B5E75A /* nc45862.caf */; };
 		F15F299D1FB9BF610062E58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F299C1FB9BF610062E58D /* AppDelegate.swift */; };
 		F15F299F1FB9BF610062E58D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F299E1FB9BF610062E58D /* ViewController.swift */; };
 		F15F29A21FB9BF610062E58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A01FB9BF610062E58D /* Main.storyboard */; };
 		F15F29A41FB9BF610062E58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A31FB9BF610062E58D /* Assets.xcassets */; };
 		F15F29A71FB9BF610062E58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A51FB9BF610062E58D /* LaunchScreen.storyboard */; };
 		F17AB6D91FC291FE00AF4A91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F17AB6DB1FC291FE00AF4A91 /* Localizable.strings */; };
-		F17AB7191FC2C51200AF4A91 /* buildno.sh in Resources */ = {isa = PBXBuildFile; fileRef = F17AB7181FC2C51200AF4A91 /* buildno.sh */; };
 		F17AB71D1FC2CE4A00AF4A91 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F17AB71C1FC2CE4A00AF4A91 /* Default-568h@2x.png */; };
-		F1FF13781FB9D57700BD0A56 /* Keys in Resources */ = {isa = PBXBuildFile; fileRef = F1FF13771FB9D57700BD0A56 /* Keys */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +97,16 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		106258902021FDB80026BFE6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F17AB7171FC2BD3400AF4A91 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
@@ -116,10 +120,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		10C8F1BE1FC7E1F900B5E75A /* nc45862.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = nc45862.aif; sourceTree = "<group>"; };
-		10C8F1BF1FC7E1F900B5E75A /* nc45862.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nc45862.caf; sourceTree = "<group>"; };
-		10C8F1C01FC7E1F900B5E75A /* nc45862.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nc45862.mp3; sourceTree = "<group>"; };
-		10C8F1C11FC7E1F900B5E75A /* nc45862.xmp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nc45862.xmp; sourceTree = "<group>"; };
+		106258782021FDB80026BFE6 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		1062587A2021FDB80026BFE6 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		10C8F1BE1FC7E1F900B5E75A /* nc45862.aif */ = {isa = PBXFileReference; explicitFileType = compiled; path = nc45862.aif; sourceTree = "<group>"; };
+		10C8F1BF1FC7E1F900B5E75A /* nc45862.caf */ = {isa = PBXFileReference; explicitFileType = compiled; path = nc45862.caf; sourceTree = "<group>"; };
+		10C8F1C01FC7E1F900B5E75A /* nc45862.mp3 */ = {isa = PBXFileReference; explicitFileType = compiled; path = nc45862.mp3; sourceTree = "<group>"; };
+		10C8F1C11FC7E1F900B5E75A /* nc45862.xmp */ = {isa = PBXFileReference; explicitFileType = compiled; fileEncoding = 4; path = nc45862.xmp; sourceTree = "<group>"; };
 		10C8F1CE1FC7E3BD00B5E75A /* nc45862.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = nc45862.caf; path = "音ネタ/nc45862.caf"; sourceTree = SOURCE_ROOT; };
 		F15F29991FB9BF610062E58D /* Axyio01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Axyio01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15F299C1FB9BF610062E58D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,7 +136,7 @@
 		F15F29A81FB9BF610062E58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F15F29AE1FB9BFA30062E58D /* Axyio01.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Axyio01.entitlements; sourceTree = "<group>"; };
 		F17AB6DA1FC291FE00AF4A91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F17AB7181FC2C51200AF4A91 /* buildno.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildno.sh; sourceTree = "<group>"; };
+		F17AB7181FC2C51200AF4A91 /* buildno.sh */ = {isa = PBXFileReference; explicitFileType = text.script; path = buildno.sh; sourceTree = "<group>"; };
 		F17AB71C1FC2CE4A00AF4A91 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F1A9F0211FC30C9C00946A5C /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
 		F1FF13771FB9D57700BD0A56 /* Keys */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Keys; sourceTree = "<group>"; };
@@ -208,6 +214,8 @@
 		F17AB7111FC2B3B500AF4A91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				106258782021FDB80026BFE6 /* UserNotifications.framework */,
+				1062587A2021FDB80026BFE6 /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -251,10 +259,10 @@
 			buildPhases = (
 				F15F29951FB9BF610062E58D /* Sources */,
 				F15F29961FB9BF610062E58D /* Frameworks */,
-				F17AB71B1FC2CA2D00AF4A91 /* ShellScript */,
 				F15F29971FB9BF610062E58D /* Resources */,
 				F17AB7171FC2BD3400AF4A91 /* Embed Frameworks */,
 				105AD7D21FC7DADE00A54096 /* Embed Frameworks */,
+				106258902021FDB80026BFE6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -273,7 +281,7 @@
 		F15F29911FB9BF610062E58D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "trifeed inc.";
 				TargetAttributes = {
@@ -373,37 +381,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C8F1CA1FC7E1F900B5E75A /* nc45862.caf in Resources */,
-				F17AB7191FC2C51200AF4A91 /* buildno.sh in Resources */,
 				F17AB6D91FC291FE00AF4A91 /* Localizable.strings in Resources */,
-				F1FF13781FB9D57700BD0A56 /* Keys in Resources */,
-				10C8F1C91FC7E1F900B5E75A /* nc45862.aif in Resources */,
 				F15F29A71FB9BF610062E58D /* LaunchScreen.storyboard in Resources */,
 				F15F29A41FB9BF610062E58D /* Assets.xcassets in Resources */,
-				10C8F1CB1FC7E1F900B5E75A /* nc45862.mp3 in Resources */,
 				F17AB71D1FC2CE4A00AF4A91 /* Default-568h@2x.png in Resources */,
-				10C8F1CF1FC7E3BD00B5E75A /* nc45862.caf in Resources */,
 				F15F29A21FB9BF610062E58D /* Main.storyboard in Resources */,
-				10C8F1CC1FC7E1F900B5E75A /* nc45862.xmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		F17AB71B1FC2CA2D00AF4A91 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "env > env.txt";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F15F29951FB9BF610062E58D /* Sources */ = {
@@ -506,6 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -557,6 +544,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -574,6 +562,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GH497R933C;
 				INFOPLIST_FILE = "$(SRCROOT)/Axyio01_src/Info.plist";
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDEBUG";
@@ -593,6 +582,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GH497R933C;
 				INFOPLIST_FILE = "$(SRCROOT)/Axyio01_src/Info.plist";
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.trifeed.Axyio01;
