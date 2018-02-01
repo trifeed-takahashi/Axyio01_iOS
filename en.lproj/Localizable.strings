@@ -7,4 +7,4 @@
 */
 "push_host"="axyio.daijoubu.tech";
 "push_url_registtoken"="/api/registToken.php";
-
+"get_alert_message"="/api/getAlertMessage.php";

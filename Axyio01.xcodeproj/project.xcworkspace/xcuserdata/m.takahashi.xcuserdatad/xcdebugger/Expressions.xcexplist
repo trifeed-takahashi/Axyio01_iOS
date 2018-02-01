@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "AppDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "notification.request.trigger ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.parseJson(json:):AppDelegate.swift">
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.getAlertMessage(userinfo:):AppDelegate.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in AppDelegate.getMessageFromServer(alert_id:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dict[&quot;message&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

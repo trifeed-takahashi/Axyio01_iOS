@@ -10,11 +10,17 @@ import UIKit
 import UserNotifications
 import Alamofire
 
+struct ParseError: Error {}
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
-
+    var myDeviceToken: String = ""
+    let push_host : String = NSLocalizedString("push_host", comment: "")
+    var view_recentMessage = ""
+    var view_isconfirm = false
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         // Override point for customization after application launch.
@@ -37,16 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().delegate = self
         
         return true
-    }
-
-    func application(_ application: UIApplication,
-                     didReceiveRemoteNotification userInfo: [AnyHashable : Any],
-                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void){
-        
-        // ここで拡張ペイロードが取得出来た。メッセージと一緒に取得出来る方法…？
-        print(userInfo);
-        
-        completionHandler(UIBackgroundFetchResult.newData)
     }
 
     // リモート通知のデバイストークン取得成功
@@ -91,9 +87,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // デバイストークンをサーバへ登録する
     private func successGetDeviceToken( deviceToken: String) -> Void {
 
-        let push_host : String = NSLocalizedString("push_host", comment: "");
-        let push_url : String = NSLocalizedString("push_url_registtoken", comment: "");
+        let push_url : String = NSLocalizedString("push_url_registtoken", comment: "")
         let request_url = "https://\(push_host)\(push_url)"
+        self.myDeviceToken = deviceToken;
 
         print("deviceToken = \(deviceToken)")
         print("Push host = \(push_host)")
@@ -105,7 +101,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "project": "axyio01",
             "devicetoken": deviceToken
         ]
-        Alamofire.request(request_url, method: HTTPMethod.post, parameters: parameters).responseString { response in
+        Alamofire.request(request_url, method: .post, parameters: parameters).responseString { response in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
             print("Result: \(response.result)")                         // response serialization result
@@ -120,28 +116,81 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-}
+    private func parseJson(json: String) throws {
+        guard let data = json.data(using: .utf8) else {
+            throw ParseError()
+        }
+        let json = try JSONSerialization.jsonObject(with: data)
+        guard let rows = json as? [[String:Any]] else {
+            throw ParseError()
+        }
+        for row in rows {
+            let result = row["result"] ?? ""
+            let message = row["message"] ?? ""
+            print("\(result) : \(message)")
+        }
+    }
 
-extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    // サーバから警報メッセージを取得する
+    private func getMessageFromServer(alert_id: String) -> Void {
 
+        let push_url : String = NSLocalizedString("get_alert_message", comment: "")
+        let request_url = "https://\(push_host)\(push_url)"
+        var ret_message = ""
+        
+        // サーバへリクエストを行う
+        let parameters = [
+            "project": "axyio01",
+            "alert_id": alert_id
+        ]
+        
+        Alamofire.request(request_url, method: .post, parameters: parameters).responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+
+            if response.result.isSuccess {
+                if let dict = response.result.value as? NSDictionary {
+                    if dict["message"] != nil {
+                        ret_message = dict["message"] as! String
+                        print(ret_message)
+                        self.view_recentMessage = ret_message;
+                        self.view_isconfirm = false;
+
+                        // TODO: viewのリロードを行う
+                    }
+                }
+            }else{
+                print(response.error.debugDescription)
+            }
+        }
+    }
+
+    private func getAlertMessage(userinfo info : [AnyHashable:Any]) -> Void {
+
+        var alert_id_str = ""
+        let alert_id_op: Any? = info["alert_id"]
+        if(alert_id_op != nil){
+            alert_id_str = alert_id_op as! String;
+        }
+
+        debugPrint("alert_id : \(alert_id_str)")
+        
+        getMessageFromServer(alert_id: alert_id_str)
+    }
+
+    //
+    //  フォアグラウンド通知のためのメソッド
+    //
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-
+        debugPrint("willPresent")
         if notification.request.trigger is UNPushNotificationTrigger {
             debugPrint("プッシュ通知受信")
+            //getAlertMessage(userinfo: notification.request.content.userInfo)
         }
-        print("========================================================")
-        //print("Push Notification will present \(notification)")
-        //print(notification.request.identifier)
-        //print(notification.request.content.userInfo)
-        let userinfokeys = notification.request.content.userInfo.keys
-        print(userinfokeys)
-        let alert_id = notification.request.content.userInfo["alert_id"]
-        if(alert_id != nil){
-            print(alert_id!)
-        }
-        print("========================================================")
         completionHandler([.badge, .sound, .alert])
     }
     
@@ -149,22 +198,12 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         
-        debugPrint(response.notification.request.identifier)
+        debugPrint("didReceive")
+        getAlertMessage(userinfo: response.notification.request.content.userInfo)
         
-        
-        //print(response.notification.request.identifier)
-        //print(response.notification.request.content.userInfo)
-        let userinfokeys = response.notification.request.content.userInfo.keys
-        print(userinfokeys)
-
-        let alert_id: Any? = response.notification.request.content.userInfo["alert_id"]
-        if(alert_id != nil){
-            print(alert_id!)
-        }
-        
-        // その他のタイプの通知に関するアクションをハンドル。
-        //print("Push Notification did receive \(response)")
         completionHandler()
     }
+    
+
 }
 
