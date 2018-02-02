@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Axyio01" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0M-PP-xNQ">
-                                <rect key="frame" x="28" y="40" width="320" height="20"/>
+                                <rect key="frame" x="28" y="64" width="320" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="cgR-ig-eQU"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="悠林館・物産館共有ポンプ施設監視">
                                         <attributes>
@@ -30,41 +33,50 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="故障は発生していません" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OeS-6I-FJn">
-                                <rect key="frame" x="42" y="97" width="292" height="378"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="292" id="Quq-aN-ue5"/>
-                                    <constraint firstAttribute="height" constant="378" id="d4q-h2-4RX"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jT5-w1-WPI">
-                                <rect key="frame" x="42" y="491" width="292" height="136"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jT5-w1-WPI">
+                                <rect key="frame" x="35" y="664" width="304" height="104"/>
+                                <viewLayoutGuide key="safeArea" id="26O-ay-J3H"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="確認しました"/>
+                                <connections>
+                                    <action selector="confirm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xy2-vI-2Uv"/>
+                                </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="msgText" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XJq-Sw-Bwe">
+                                <rect key="frame" x="22" y="107" width="337" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES"/>
+                                </accessibility>
+                                <viewLayoutGuide key="safeArea" id="jUM-Pq-ged"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wYp-gx-cyj" firstAttribute="bottom" secondItem="OeS-6I-FJn" secondAttribute="bottom" constant="192" id="HXz-Pr-QAT"/>
-                            <constraint firstItem="R0M-PP-xNQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ReR-mx-Wd8"/>
-                            <constraint firstItem="R0M-PP-xNQ" firstAttribute="top" secondItem="wYp-gx-cyj" secondAttribute="top" constant="20" id="WB1-Ys-IC6"/>
-                            <constraint firstItem="OeS-6I-FJn" firstAttribute="top" secondItem="R0M-PP-xNQ" secondAttribute="bottom" constant="37" id="WIz-WB-wXO"/>
-                            <constraint firstItem="wYp-gx-cyj" firstAttribute="leading" secondItem="OeS-6I-FJn" secondAttribute="leading" constant="-42" id="hVb-W6-9PM"/>
+                            <constraint firstItem="R0M-PP-xNQ" firstAttribute="top" secondItem="wYp-gx-cyj" secondAttribute="top" constant="20" id="2JQ-oz-mv9"/>
+                            <constraint firstAttribute="bottom" secondItem="jT5-w1-WPI" secondAttribute="bottom" priority="999" constant="35" id="8k6-1u-Tzt"/>
+                            <constraint firstItem="XJq-Sw-Bwe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="22" id="Lfs-wr-8zg"/>
+                            <constraint firstAttribute="trailing" secondItem="XJq-Sw-Bwe" secondAttribute="trailing" constant="16" id="XyF-L6-ZXL"/>
+                            <constraint firstItem="jT5-w1-WPI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="35" id="qR4-wV-eVm"/>
+                            <constraint firstItem="XJq-Sw-Bwe" firstAttribute="top" secondItem="R0M-PP-xNQ" secondAttribute="bottom" constant="26" id="t7o-t4-E0l"/>
+                            <constraint firstItem="jT5-w1-WPI" firstAttribute="top" secondItem="XJq-Sw-Bwe" secondAttribute="bottom" constant="15" id="uWA-dE-dKI"/>
+                            <constraint firstItem="R0M-PP-xNQ" firstAttribute="leading" secondItem="wYp-gx-cyj" secondAttribute="leading" constant="28" id="vkG-j7-hXz"/>
+                            <constraint firstAttribute="trailing" secondItem="jT5-w1-WPI" secondAttribute="trailing" constant="36" id="wOi-mc-pZz"/>
+                            <constraint firstItem="wYp-gx-cyj" firstAttribute="trailing" secondItem="R0M-PP-xNQ" secondAttribute="trailing" constant="27" id="zrN-RJ-mlq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wYp-gx-cyj"/>
                     </view>
                     <connections>
                         <outlet property="btnConfirm" destination="jT5-w1-WPI" id="7JT-J1-3iJ"/>
-                        <outlet property="msgText" destination="OeS-6I-FJn" id="mmw-75-ZM8"/>
+                        <outlet property="msgText" destination="XJq-Sw-Bwe" id="zO9-Eq-D4r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="102.99850074962519"/>
+            <point key="canvasLocation" x="-80.799999999999997" y="101.97044334975369"/>
         </scene>
     </scenes>
 </document>

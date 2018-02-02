@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     let push_host : String = NSLocalizedString("push_host", comment: "")
     var view_recentMessage = ""
     var view_isconfirm = false
+    var viewController: ViewController!
+    var alert_id = ""
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -159,6 +161,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                         self.view_isconfirm = false;
 
                         // TODO: viewのリロードを行う
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        appDelegate.viewController.reloadView(msg: self.view_recentMessage, mytoken: self.myDeviceToken, alert_id: alert_id)
                     }
                 }
             }else{
@@ -175,6 +179,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             alert_id_str = alert_id_op as! String;
         }
 
+        self.alert_id = alert_id_str
         debugPrint("alert_id : \(alert_id_str)")
         
         getMessageFromServer(alert_id: alert_id_str)
