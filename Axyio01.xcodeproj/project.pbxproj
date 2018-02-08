@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10512CAA2023A60D00079053 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A9F02D1FC30C9D00946A5C /* Alamofire.framework */; };
-		10512CAB2023A60D00079053 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1A9F02D1FC30C9D00946A5C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		106467002023ACA10026685F /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1A9F02D1FC30C9D00946A5C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		10C8F1CA1FC7E1F900B5E75A /* nc45862.caf in Resources */ = {isa = PBXBuildFile; fileRef = 10C8F1BF1FC7E1F900B5E75A /* nc45862.caf */; };
 		F15F299D1FB9BF610062E58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F299C1FB9BF610062E58D /* AppDelegate.swift */; };
 		F15F299F1FB9BF610062E58D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F299E1FB9BF610062E58D /* ViewController.swift */; };
 		F15F29A21FB9BF610062E58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A01FB9BF610062E58D /* Main.storyboard */; };
 		F15F29A41FB9BF610062E58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A31FB9BF610062E58D /* Assets.xcassets */; };
 		F15F29A71FB9BF610062E58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A51FB9BF610062E58D /* LaunchScreen.storyboard */; };
+		F177F4B3202AADB3005A67E1 /* icon1x.png in Resources */ = {isa = PBXBuildFile; fileRef = F177F4AF202AADB2005A67E1 /* icon1x.png */; };
+		F177F4B4202AADB3005A67E1 /* icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F177F4B0202AADB2005A67E1 /* icon2x.png */; };
+		F177F4B5202AADB3005A67E1 /* iconAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F177F4B1202AADB3005A67E1 /* iconAppIcon.png */; };
+		F177F4B6202AADB3005A67E1 /* icon3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F177F4B2202AADB3005A67E1 /* icon3x.png */; };
+		F177F4B7202AE56F005A67E1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A9F02D1FC30C9D00946A5C /* Alamofire.framework */; };
+		F177F4B8202AE56F005A67E1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1A9F02D1FC30C9D00946A5C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F17AB6D91FC291FE00AF4A91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F17AB6DB1FC291FE00AF4A91 /* Localizable.strings */; };
 		F17AB71D1FC2CE4A00AF4A91 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F17AB71C1FC2CE4A00AF4A91 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
@@ -28,7 +31,7 @@
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
-		105AD7D01FC7DADE00A54096 /* PBXContainerItemProxy */ = {
+		F177F4B9202AE56F005A67E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F1A9F0211FC30C9C00946A5C /* Alamofire.xcodeproj */;
 			proxyType = 1;
@@ -87,17 +90,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		10512CAE2023A60E00079053 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				10512CAB2023A60D00079053 /* Alamofire.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		106258902021FDB80026BFE6 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,14 +100,15 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		106466FF2023AC970026685F /* CopyFiles */ = {
+		F177F4BB202AE56F005A67E1 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				106467002023ACA10026685F /* Alamofire.framework in CopyFiles */,
+				F177F4B8202AE56F005A67E1 /* Alamofire.framework in Embed Frameworks */,
 			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -136,6 +129,11 @@
 		F15F29A61FB9BF610062E58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F15F29A81FB9BF610062E58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F15F29AE1FB9BFA30062E58D /* Axyio01.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Axyio01.entitlements; sourceTree = "<group>"; };
+		F177F4A3202AAA0E005A67E1 /* 悠林館・物産館アイコン.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "悠林館・物産館アイコン.ai"; sourceTree = "<group>"; };
+		F177F4AF202AADB2005A67E1 /* icon1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1x.png; sourceTree = "<group>"; };
+		F177F4B0202AADB2005A67E1 /* icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2x.png; sourceTree = "<group>"; };
+		F177F4B1202AADB3005A67E1 /* iconAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconAppIcon.png; sourceTree = "<group>"; };
+		F177F4B2202AADB3005A67E1 /* icon3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3x.png; sourceTree = "<group>"; };
 		F17AB6DA1FC291FE00AF4A91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F17AB7181FC2C51200AF4A91 /* buildno.sh */ = {isa = PBXFileReference; explicitFileType = text.script; path = buildno.sh; sourceTree = "<group>"; };
 		F17AB71C1FC2CE4A00AF4A91 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -148,7 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10512CAA2023A60D00079053 /* Alamofire.framework in Frameworks */,
+				F177F4B7202AE56F005A67E1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +175,7 @@
 		F15F29901FB9BF610062E58D = {
 			isa = PBXGroup;
 			children = (
+				F177F4A0202AA2F4005A67E1 /* icon */,
 				10C8F1BD1FC7E1F900B5E75A /* 音ネタ */,
 				F17AB7181FC2C51200AF4A91 /* buildno.sh */,
 				F17AB71E1FC2D0D800AF4A91 /* Library */,
@@ -210,6 +209,18 @@
 				F15F29A81FB9BF610062E58D /* Info.plist */,
 			);
 			path = Axyio01_src;
+			sourceTree = "<group>";
+		};
+		F177F4A0202AA2F4005A67E1 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				F177F4AF202AADB2005A67E1 /* icon1x.png */,
+				F177F4B0202AADB2005A67E1 /* icon2x.png */,
+				F177F4B2202AADB3005A67E1 /* icon3x.png */,
+				F177F4B1202AADB3005A67E1 /* iconAppIcon.png */,
+				F177F4A3202AAA0E005A67E1 /* 悠林館・物産館アイコン.ai */,
+			);
+			path = icon;
 			sourceTree = "<group>";
 		};
 		F17AB7111FC2B3B500AF4A91 /* Frameworks */ = {
@@ -262,14 +273,13 @@
 				F15F29961FB9BF610062E58D /* Frameworks */,
 				F15F29971FB9BF610062E58D /* Resources */,
 				106258902021FDB80026BFE6 /* Embed App Extensions */,
-				10512CAE2023A60E00079053 /* Embed Frameworks */,
-				106466FF2023AC970026685F /* CopyFiles */,
+				F177F4BB202AE56F005A67E1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				105AD7D11FC7DADE00A54096 /* PBXTargetDependency */,
 				10512CAD2023A60D00079053 /* PBXTargetDependency */,
+				F177F4BA202AE56F005A67E1 /* PBXTargetDependency */,
 			);
 			name = Axyio01;
 			productName = Axyio01;
@@ -384,9 +394,13 @@
 				10C8F1CA1FC7E1F900B5E75A /* nc45862.caf in Resources */,
 				F17AB6D91FC291FE00AF4A91 /* Localizable.strings in Resources */,
 				F15F29A71FB9BF610062E58D /* LaunchScreen.storyboard in Resources */,
+				F177F4B6202AADB3005A67E1 /* icon3x.png in Resources */,
 				F15F29A41FB9BF610062E58D /* Assets.xcassets in Resources */,
 				F17AB71D1FC2CE4A00AF4A91 /* Default-568h@2x.png in Resources */,
 				F15F29A21FB9BF610062E58D /* Main.storyboard in Resources */,
+				F177F4B5202AADB3005A67E1 /* iconAppIcon.png in Resources */,
+				F177F4B3202AADB3005A67E1 /* icon1x.png in Resources */,
+				F177F4B4202AADB3005A67E1 /* icon2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,10 +424,10 @@
 			name = "Alamofire iOS";
 			targetProxy = 10512CAC2023A60D00079053 /* PBXContainerItemProxy */;
 		};
-		105AD7D11FC7DADE00A54096 /* PBXTargetDependency */ = {
+		F177F4BA202AE56F005A67E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
-			targetProxy = 105AD7D01FC7DADE00A54096 /* PBXContainerItemProxy */;
+			targetProxy = F177F4B9202AE56F005A67E1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -560,6 +574,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Axyio01_src/Axyio01.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GH497R933C;
 				INFOPLIST_FILE = "$(SRCROOT)/Axyio01_src/Info.plist";
@@ -570,6 +585,8 @@
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.trifeed.Axyio01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -581,6 +598,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Axyio01_src/Axyio01.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GH497R933C;
 				INFOPLIST_FILE = "$(SRCROOT)/Axyio01_src/Info.plist";
@@ -590,6 +608,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.trifeed.Axyio01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

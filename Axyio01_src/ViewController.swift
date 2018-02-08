@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.viewController = self
         
         btnConfirm.setTitleColor(UIColor.white, for: .normal)
