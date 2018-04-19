@@ -13,6 +13,7 @@
 		F15F29A21FB9BF610062E58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A01FB9BF610062E58D /* Main.storyboard */; };
 		F15F29A41FB9BF610062E58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A31FB9BF610062E58D /* Assets.xcassets */; };
 		F15F29A71FB9BF610062E58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A51FB9BF610062E58D /* LaunchScreen.storyboard */; };
+		F163800D208831E30084804D /* 悠林館・物産館アイコン.ai in Resources */ = {isa = PBXBuildFile; fileRef = F177F4A3202AAA0E005A67E1 /* 悠林館・物産館アイコン.ai */; };
 		F177F4B3202AADB3005A67E1 /* icon1x.png in Resources */ = {isa = PBXBuildFile; fileRef = F177F4AF202AADB2005A67E1 /* icon1x.png */; };
 		F177F4B4202AADB3005A67E1 /* icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F177F4B0202AADB2005A67E1 /* icon2x.png */; };
 		F177F4B5202AADB3005A67E1 /* iconAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F177F4B1202AADB3005A67E1 /* iconAppIcon.png */; };
@@ -129,16 +130,15 @@
 		F15F29A61FB9BF610062E58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F15F29A81FB9BF610062E58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F15F29AE1FB9BFA30062E58D /* Axyio01.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Axyio01.entitlements; sourceTree = "<group>"; };
-		F177F4A3202AAA0E005A67E1 /* 悠林館・物産館アイコン.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "悠林館・物産館アイコン.ai"; sourceTree = "<group>"; };
-		F177F4AF202AADB2005A67E1 /* icon1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1x.png; sourceTree = "<group>"; };
-		F177F4B0202AADB2005A67E1 /* icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2x.png; sourceTree = "<group>"; };
-		F177F4B1202AADB3005A67E1 /* iconAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconAppIcon.png; sourceTree = "<group>"; };
-		F177F4B2202AADB3005A67E1 /* icon3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3x.png; sourceTree = "<group>"; };
+		F177F4A3202AAA0E005A67E1 /* 悠林館・物産館アイコン.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "悠林館・物産館アイコン.ai"; path = "icon/悠林館・物産館アイコン.ai"; sourceTree = SOURCE_ROOT; };
+		F177F4AF202AADB2005A67E1 /* icon1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon1x.png; path = icon/icon1x.png; sourceTree = SOURCE_ROOT; };
+		F177F4B0202AADB2005A67E1 /* icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon2x.png; path = icon/icon2x.png; sourceTree = SOURCE_ROOT; };
+		F177F4B1202AADB3005A67E1 /* iconAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconAppIcon.png; path = icon/iconAppIcon.png; sourceTree = SOURCE_ROOT; };
+		F177F4B2202AADB3005A67E1 /* icon3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon3x.png; path = icon/icon3x.png; sourceTree = SOURCE_ROOT; };
 		F17AB6DA1FC291FE00AF4A91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F17AB7181FC2C51200AF4A91 /* buildno.sh */ = {isa = PBXFileReference; explicitFileType = text.script; path = buildno.sh; sourceTree = "<group>"; };
 		F17AB71C1FC2CE4A00AF4A91 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F1A9F0211FC30C9C00946A5C /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
-		F1FF13771FB9D57700BD0A56 /* Keys */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Keys; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,9 +172,17 @@
 			path = sound;
 			sourceTree = "<group>";
 		};
+		F1586D47202EE87A008C31C8 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
 		F15F29901FB9BF610062E58D = {
 			isa = PBXGroup;
 			children = (
+				F1586D47202EE87A008C31C8 /* Keys */,
 				F177F4A0202AA2F4005A67E1 /* icon */,
 				10C8F1BD1FC7E1F900B5E75A /* 音ネタ */,
 				F17AB7181FC2C51200AF4A91 /* buildno.sh */,
@@ -183,7 +191,6 @@
 				F17AB6DB1FC291FE00AF4A91 /* Localizable.strings */,
 				F15F299B1FB9BF610062E58D /* Axyio01_src */,
 				F15F299A1FB9BF610062E58D /* Products */,
-				F1FF13771FB9D57700BD0A56 /* Keys */,
 				F17AB7111FC2B3B500AF4A91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -399,6 +406,7 @@
 				F17AB71D1FC2CE4A00AF4A91 /* Default-568h@2x.png in Resources */,
 				F15F29A21FB9BF610062E58D /* Main.storyboard in Resources */,
 				F177F4B5202AADB3005A67E1 /* iconAppIcon.png in Resources */,
+				F163800D208831E30084804D /* 悠林館・物産館アイコン.ai in Resources */,
 				F177F4B3202AADB3005A67E1 /* icon1x.png in Resources */,
 				F177F4B4202AADB3005A67E1 /* icon2x.png in Resources */,
 			);
@@ -576,14 +584,14 @@
 				CODE_SIGN_ENTITLEMENTS = Axyio01_src/Axyio01.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GH497R933C;
+				DEVELOPMENT_TEAM = 386WB756R9;
 				INFOPLIST_FILE = "$(SRCROOT)/Axyio01_src/Info.plist";
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.trifeed.Axyio01;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coi-coi.ios.Axyio001";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -600,14 +608,15 @@
 				CODE_SIGN_ENTITLEMENTS = Axyio01_src/Axyio01.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GH497R933C;
+				DEVELOPMENT_TEAM = 386WB756R9;
 				INFOPLIST_FILE = "$(SRCROOT)/Axyio01_src/Info.plist";
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.trifeed.Axyio01;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coi-coi.ios.Axyio001";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
