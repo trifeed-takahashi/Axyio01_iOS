@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		10C8F1CA1FC7E1F900B5E75A /* nc45862.caf in Resources */ = {isa = PBXBuildFile; fileRef = 10C8F1BF1FC7E1F900B5E75A /* nc45862.caf */; };
+		10D1B9C12088B5DB00D3F41B /* apnscert.pem in Resources */ = {isa = PBXBuildFile; fileRef = 10D1B9B52088B5DB00D3F41B /* apnscert.pem */; };
+		10D1B9C22088B5DB00D3F41B /* apnskey.pem in Resources */ = {isa = PBXBuildFile; fileRef = 10D1B9BD2088B5DB00D3F41B /* apnskey.pem */; };
+		10D1B9C32088B5DB00D3F41B /* apn_production_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 10D1B9BE2088B5DB00D3F41B /* apn_production_key.p12 */; };
+		10D1B9C42088B5DB00D3F41B /* apn_production.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 10D1B9BF2088B5DB00D3F41B /* apn_production.p12 */; };
+		10D1B9C52088B5DB00D3F41B /* apnskey_noenc.pem in Resources */ = {isa = PBXBuildFile; fileRef = 10D1B9C02088B5DB00D3F41B /* apnskey_noenc.pem */; };
 		F15F299D1FB9BF610062E58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F299C1FB9BF610062E58D /* AppDelegate.swift */; };
 		F15F299F1FB9BF610062E58D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F299E1FB9BF610062E58D /* ViewController.swift */; };
 		F15F29A21FB9BF610062E58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A01FB9BF610062E58D /* Main.storyboard */; };
@@ -124,6 +129,11 @@
 		10C8F1C01FC7E1F900B5E75A /* nc45862.mp3 */ = {isa = PBXFileReference; explicitFileType = compiled; path = nc45862.mp3; sourceTree = "<group>"; };
 		10C8F1C11FC7E1F900B5E75A /* nc45862.xmp */ = {isa = PBXFileReference; explicitFileType = compiled; fileEncoding = 4; path = nc45862.xmp; sourceTree = "<group>"; };
 		10C8F1CE1FC7E3BD00B5E75A /* nc45862.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = nc45862.caf; path = "音ネタ/nc45862.caf"; sourceTree = SOURCE_ROOT; };
+		10D1B9B52088B5DB00D3F41B /* apnscert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = apnscert.pem; sourceTree = "<group>"; };
+		10D1B9BD2088B5DB00D3F41B /* apnskey.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = apnskey.pem; sourceTree = "<group>"; };
+		10D1B9BE2088B5DB00D3F41B /* apn_production_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = apn_production_key.p12; sourceTree = "<group>"; };
+		10D1B9BF2088B5DB00D3F41B /* apn_production.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = apn_production.p12; sourceTree = "<group>"; };
+		10D1B9C02088B5DB00D3F41B /* apnskey_noenc.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = apnskey_noenc.pem; sourceTree = "<group>"; };
 		F15F29991FB9BF610062E58D /* Axyio01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Axyio01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15F299C1FB9BF610062E58D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F15F299E1FB9BF610062E58D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +191,11 @@
 		F1586D47202EE87A008C31C8 /* Keys */ = {
 			isa = PBXGroup;
 			children = (
+				10D1B9BE2088B5DB00D3F41B /* apn_production_key.p12 */,
+				10D1B9BF2088B5DB00D3F41B /* apn_production.p12 */,
+				10D1B9B52088B5DB00D3F41B /* apnscert.pem */,
+				10D1B9C02088B5DB00D3F41B /* apnskey_noenc.pem */,
+				10D1B9BD2088B5DB00D3F41B /* apnskey.pem */,
 			);
 			path = Keys;
 			sourceTree = "<group>";
@@ -404,13 +419,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10D1B9C12088B5DB00D3F41B /* apnscert.pem in Resources */,
 				F1638016208833700084804D /* icon2x.png in Resources */,
 				F1638018208833700084804D /* icon3x.png in Resources */,
+				10D1B9C42088B5DB00D3F41B /* apn_production.p12 in Resources */,
 				F1638014208833700084804D /* 悠林館・物産館アイコン.ai in Resources */,
+				10D1B9C32088B5DB00D3F41B /* apn_production_key.p12 in Resources */,
 				10C8F1CA1FC7E1F900B5E75A /* nc45862.caf in Resources */,
 				F163801B208834500084804D /* Keys in Resources */,
+				10D1B9C52088B5DB00D3F41B /* apnskey_noenc.pem in Resources */,
 				F17AB6D91FC291FE00AF4A91 /* Localizable.strings in Resources */,
 				F1638017208833700084804D /* icon1x.png in Resources */,
+				10D1B9C22088B5DB00D3F41B /* apnskey.pem in Resources */,
 				F15F29A71FB9BF610062E58D /* LaunchScreen.storyboard in Resources */,
 				F15F29A41FB9BF610062E58D /* Assets.xcassets in Resources */,
 				F17AB71D1FC2CE4A00AF4A91 /* Default-568h@2x.png in Resources */,
