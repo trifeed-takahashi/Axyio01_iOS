@@ -13,11 +13,13 @@
 		F15F29A21FB9BF610062E58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A01FB9BF610062E58D /* Main.storyboard */; };
 		F15F29A41FB9BF610062E58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A31FB9BF610062E58D /* Assets.xcassets */; };
 		F15F29A71FB9BF610062E58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15F29A51FB9BF610062E58D /* LaunchScreen.storyboard */; };
-		F163800D208831E30084804D /* 悠林館・物産館アイコン.ai in Resources */ = {isa = PBXBuildFile; fileRef = F177F4A3202AAA0E005A67E1 /* 悠林館・物産館アイコン.ai */; };
-		F177F4B3202AADB3005A67E1 /* icon1x.png in Resources */ = {isa = PBXBuildFile; fileRef = F177F4AF202AADB2005A67E1 /* icon1x.png */; };
-		F177F4B4202AADB3005A67E1 /* icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F177F4B0202AADB2005A67E1 /* icon2x.png */; };
-		F177F4B5202AADB3005A67E1 /* iconAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F177F4B1202AADB3005A67E1 /* iconAppIcon.png */; };
-		F177F4B6202AADB3005A67E1 /* icon3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F177F4B2202AADB3005A67E1 /* icon3x.png */; };
+		F1638014208833700084804D /* 悠林館・物産館アイコン.ai in Resources */ = {isa = PBXBuildFile; fileRef = F163800F2088336E0084804D /* 悠林館・物産館アイコン.ai */; };
+		F1638015208833700084804D /* iconAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F16380102088336F0084804D /* iconAppIcon.png */; };
+		F1638016208833700084804D /* icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F16380112088336F0084804D /* icon2x.png */; };
+		F1638017208833700084804D /* icon1x.png in Resources */ = {isa = PBXBuildFile; fileRef = F16380122088336F0084804D /* icon1x.png */; };
+		F1638018208833700084804D /* icon3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1638013208833700084804D /* icon3x.png */; };
+		F163801B208834500084804D /* Keys in Resources */ = {isa = PBXBuildFile; fileRef = F1638019208834500084804D /* Keys */; };
+		F163801C208834500084804D /* 音ネタ in Resources */ = {isa = PBXBuildFile; fileRef = F163801A208834500084804D /* 音ネタ */; };
 		F177F4B7202AE56F005A67E1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A9F02D1FC30C9D00946A5C /* Alamofire.framework */; };
 		F177F4B8202AE56F005A67E1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1A9F02D1FC30C9D00946A5C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F17AB6D91FC291FE00AF4A91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F17AB6DB1FC291FE00AF4A91 /* Localizable.strings */; };
@@ -130,11 +132,13 @@
 		F15F29A61FB9BF610062E58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F15F29A81FB9BF610062E58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F15F29AE1FB9BFA30062E58D /* Axyio01.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Axyio01.entitlements; sourceTree = "<group>"; };
-		F177F4A3202AAA0E005A67E1 /* 悠林館・物産館アイコン.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "悠林館・物産館アイコン.ai"; path = "icon/悠林館・物産館アイコン.ai"; sourceTree = SOURCE_ROOT; };
-		F177F4AF202AADB2005A67E1 /* icon1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon1x.png; path = icon/icon1x.png; sourceTree = SOURCE_ROOT; };
-		F177F4B0202AADB2005A67E1 /* icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon2x.png; path = icon/icon2x.png; sourceTree = SOURCE_ROOT; };
-		F177F4B1202AADB3005A67E1 /* iconAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconAppIcon.png; path = icon/iconAppIcon.png; sourceTree = SOURCE_ROOT; };
-		F177F4B2202AADB3005A67E1 /* icon3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon3x.png; path = icon/icon3x.png; sourceTree = SOURCE_ROOT; };
+		F163800F2088336E0084804D /* 悠林館・物産館アイコン.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "悠林館・物産館アイコン.ai"; sourceTree = "<group>"; };
+		F16380102088336F0084804D /* iconAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconAppIcon.png; sourceTree = "<group>"; };
+		F16380112088336F0084804D /* icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2x.png; sourceTree = "<group>"; };
+		F16380122088336F0084804D /* icon1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1x.png; sourceTree = "<group>"; };
+		F1638013208833700084804D /* icon3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3x.png; sourceTree = "<group>"; };
+		F1638019208834500084804D /* Keys */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Keys; sourceTree = SOURCE_ROOT; };
+		F163801A208834500084804D /* 音ネタ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "音ネタ"; sourceTree = SOURCE_ROOT; };
 		F17AB6DA1FC291FE00AF4A91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F17AB7181FC2C51200AF4A91 /* buildno.sh */ = {isa = PBXFileReference; explicitFileType = text.script; path = buildno.sh; sourceTree = "<group>"; };
 		F17AB71C1FC2CE4A00AF4A91 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 		10C8F1CD1FC7E37700B5E75A /* sound */ = {
 			isa = PBXGroup;
 			children = (
+				F1638019208834500084804D /* Keys */,
+				F163801A208834500084804D /* 音ネタ */,
 				10C8F1CE1FC7E3BD00B5E75A /* nc45862.caf */,
 			);
 			path = sound;
@@ -182,8 +188,8 @@
 		F15F29901FB9BF610062E58D = {
 			isa = PBXGroup;
 			children = (
+				F163800E208832C90084804D /* icon */,
 				F1586D47202EE87A008C31C8 /* Keys */,
-				F177F4A0202AA2F4005A67E1 /* icon */,
 				10C8F1BD1FC7E1F900B5E75A /* 音ネタ */,
 				F17AB7181FC2C51200AF4A91 /* buildno.sh */,
 				F17AB71E1FC2D0D800AF4A91 /* Library */,
@@ -218,14 +224,14 @@
 			path = Axyio01_src;
 			sourceTree = "<group>";
 		};
-		F177F4A0202AA2F4005A67E1 /* icon */ = {
+		F163800E208832C90084804D /* icon */ = {
 			isa = PBXGroup;
 			children = (
-				F177F4AF202AADB2005A67E1 /* icon1x.png */,
-				F177F4B0202AADB2005A67E1 /* icon2x.png */,
-				F177F4B2202AADB3005A67E1 /* icon3x.png */,
-				F177F4B1202AADB3005A67E1 /* iconAppIcon.png */,
-				F177F4A3202AAA0E005A67E1 /* 悠林館・物産館アイコン.ai */,
+				F16380122088336F0084804D /* icon1x.png */,
+				F16380112088336F0084804D /* icon2x.png */,
+				F1638013208833700084804D /* icon3x.png */,
+				F16380102088336F0084804D /* iconAppIcon.png */,
+				F163800F2088336E0084804D /* 悠林館・物産館アイコン.ai */,
 			);
 			path = icon;
 			sourceTree = "<group>";
@@ -398,17 +404,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1638016208833700084804D /* icon2x.png in Resources */,
+				F1638018208833700084804D /* icon3x.png in Resources */,
+				F1638014208833700084804D /* 悠林館・物産館アイコン.ai in Resources */,
 				10C8F1CA1FC7E1F900B5E75A /* nc45862.caf in Resources */,
+				F163801B208834500084804D /* Keys in Resources */,
 				F17AB6D91FC291FE00AF4A91 /* Localizable.strings in Resources */,
+				F1638017208833700084804D /* icon1x.png in Resources */,
 				F15F29A71FB9BF610062E58D /* LaunchScreen.storyboard in Resources */,
-				F177F4B6202AADB3005A67E1 /* icon3x.png in Resources */,
 				F15F29A41FB9BF610062E58D /* Assets.xcassets in Resources */,
 				F17AB71D1FC2CE4A00AF4A91 /* Default-568h@2x.png in Resources */,
 				F15F29A21FB9BF610062E58D /* Main.storyboard in Resources */,
-				F177F4B5202AADB3005A67E1 /* iconAppIcon.png in Resources */,
-				F163800D208831E30084804D /* 悠林館・物産館アイコン.ai in Resources */,
-				F177F4B3202AADB3005A67E1 /* icon1x.png in Resources */,
-				F177F4B4202AADB3005A67E1 /* icon2x.png in Resources */,
+				F1638015208833700084804D /* iconAppIcon.png in Resources */,
+				F163801C208834500084804D /* 音ネタ in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
